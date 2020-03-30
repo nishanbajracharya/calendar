@@ -75,8 +75,7 @@ function resetDays() {
 
 function renderCalendar(date) {
   const calendar = getCalendar(date);
-  console.log(calendar);
-
+  
   currentDate.innerHTML = calendar.current.year + ' ' + (calendar.current.month + 1);
 
   prevDate = calendar.previousMonth;
