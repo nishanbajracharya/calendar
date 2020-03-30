@@ -4045,10 +4045,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 var calendarHeader = document.querySelector('#app .calendar-container .header');
 var calendarMain = document.querySelector('#app .calendar-container .main');
 var HEADERS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var headerItems = [];
 var calendarItems = [];
 var prevDate;
-var selectedDate = new Date();
 var nextDate;
 var currentDate = document.querySelector('.current-date');
 var btnPrev = document.querySelector('.btn-prev');
@@ -4070,7 +4070,7 @@ function initializeCalendar() {
   HEADERS.forEach(function (header) {
     var el = document.createElement('div');
     el.classList.add('header-item');
-    el.innerHTML = header;
+    el.innerHTML = header[0];
     calendarHeader.appendChild(el);
     headerItems.push(el);
   });
@@ -4097,7 +4097,7 @@ function resetDays() {
 
 function renderCalendar(date) {
   var calendar = (0, _calendarCli.getCalendar)(date);
-  currentDate.innerHTML = calendar.current.year + ' ' + (calendar.current.month + 1);
+  currentDate.innerHTML = "".concat(MONTHS[calendar.current.month], " ").concat(calendar.current.year);
   prevDate = calendar.previousMonth;
   nextDate = calendar.nextMonth;
   calendar.daysWithPadding.forEach(function (date, i) {
@@ -4145,7 +4145,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56123" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58840" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
