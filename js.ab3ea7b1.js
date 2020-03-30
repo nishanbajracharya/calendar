@@ -111,4 +111,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"calendar-cli":"i9Ot"}],"QvaY":[function(require,module,exports) {
 "use strict";require("normalize.css"),require("../styles/index.scss");var e=require("./calendar");(0,e.initializeCalendar)();
 },{"normalize.css":"DOAq","../styles/index.scss":"DOAq","./calendar":"qLPT"}]},{},["QvaY"], null)
-//# sourceMappingURL=/js.ab3ea7b1.js.map
+//# sourceMappingURL=/calendar/js.ab3ea7b1.js.map
