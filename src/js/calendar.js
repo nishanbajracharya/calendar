@@ -18,6 +18,25 @@ const HEADERS = [
 const headerItems = [];
 const calendarItems = [];
 
+let prevDate;
+let selectedDate = new Date();
+let nextDate;
+
+const currentDate = document.querySelector('.current-date');
+
+const btnPrev = document.querySelector('.btn-prev');
+const btnNext = document.querySelector('.btn-next');
+
+btnPrev.onclick = function() {
+  resetDays();
+  renderCalendar(prevDate);
+};
+
+btnNext.onclick = function() {
+  resetDays();
+  renderCalendar(nextDate);
+};
+
 export function initializeCalendar() {
   calendarHeader.innerHTML = '';
   calendarMain.innerHTML = '';
@@ -44,7 +63,7 @@ export function initializeCalendar() {
     });
 
   resetDays();
-  renderCalendar(new Date('2020-03-02'));
+  renderCalendar(new Date());
 }
 
 function resetDays() {
@@ -56,10 +75,14 @@ function resetDays() {
 
 function renderCalendar(date) {
   const calendar = getCalendar(date);
+  console.log(calendar);
+
+  currentDate.innerHTML = calendar.current.year + ' ' + (calendar.current.month + 1);
+
+  prevDate = calendar.previousMonth;
+  nextDate = calendar.nextMonth;
 
   calendar.daysWithPadding.forEach((date, i) => {
-    console.log(date);
-
     date.isToday && calendarItems[i].classList.add('today');
     date.isWeekend && calendarItems[i].classList.add('weekend');
     !date.isSameMonth && calendarItems[i].classList.add('other-month');
