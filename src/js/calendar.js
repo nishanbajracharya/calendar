@@ -15,11 +15,25 @@ const HEADERS = [
   'Saturday',
 ];
 
+const MONTHS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
 const headerItems = [];
 const calendarItems = [];
 
 let prevDate;
-let selectedDate = new Date();
 let nextDate;
 
 const currentDate = document.querySelector('.current-date');
@@ -44,7 +58,7 @@ export function initializeCalendar() {
   HEADERS.forEach(header => {
     const el = document.createElement('div');
     el.classList.add('header-item');
-    el.innerHTML = header;
+    el.innerHTML = header[0];
 
     calendarHeader.appendChild(el);
 
@@ -75,8 +89,8 @@ function resetDays() {
 
 function renderCalendar(date) {
   const calendar = getCalendar(date);
-  
-  currentDate.innerHTML = calendar.current.year + ' ' + (calendar.current.month + 1);
+
+  currentDate.innerHTML = `${MONTHS[calendar.current.month]} ${calendar.current.year}`;
 
   prevDate = calendar.previousMonth;
   nextDate = calendar.nextMonth;
