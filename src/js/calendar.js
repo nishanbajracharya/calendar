@@ -1,3 +1,5 @@
+import { getCalendar } from 'calendar-cli';
+
 const calendarHeader = document.querySelector(
   '#app .calendar-container .header'
 );
@@ -40,4 +42,28 @@ export function initializeCalendar() {
 
       calendarItems.push(el);
     });
+
+  resetDays();
+  renderCalendar(new Date('2020-03-02'));
+}
+
+function resetDays() {
+  calendarItems.forEach(el => {
+    el.innerHTML = '';
+    el.setAttribute('class', 'day-item');
+  });
+}
+
+function renderCalendar(date) {
+  const calendar = getCalendar(date);
+
+  calendar.daysWithPadding.forEach((date, i) => {
+    console.log(date);
+
+    date.isToday && calendarItems[i].classList.add('today');
+    date.isWeekend && calendarItems[i].classList.add('weekend');
+    !date.isSameMonth && calendarItems[i].classList.add('other-month');
+
+    calendarItems[i].innerHTML = date.date;
+  });
 }

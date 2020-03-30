@@ -1334,6 +1334,13 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
+calendar-cli@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/calendar-cli/-/calendar-cli-1.0.0.tgz#d15cf94c2d2532c32e921ee7267f96339a56603d"
+  integrity sha512-fvUyBu807n5/+cms5l8l1I7VbCsO1ZXsuueWu0I9MoMmzf2Jdb7s13ouwR2IgPSCV3RierY7shDRzcAtzI+J1A==
+  dependencies:
+    date-fns "^2.11.1"
+
 call-me-maybe@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/call-me-maybe/-/call-me-maybe-1.0.1.tgz#26d208ea89e37b5cbde60250a15f031c16a4d66b"
@@ -1896,6 +1903,11 @@ data-urls@^1.1.0:
     abab "^2.0.0"
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
+
+date-fns@^2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.11.1.tgz#197b8be1bbf5c5e6fe8bea817f0fe111820e7a12"
+  integrity sha512-3RdUoinZ43URd2MJcquzBbDQo+J87cSzB8NkXdZiN5ia1UNyep0oCyitfiL88+R7clGTeq/RniXAc16gWyAu1w==
 
 deasync@^0.1.14:
   version "0.1.19"

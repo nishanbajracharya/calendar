@@ -2,6 +2,7 @@
   width: 952px;
   margin: 20px auto;
   text-align: center;
+
   .header {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -34,6 +35,28 @@
       justify-content: center;
       border-left: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
+
+      &.today {
+        position: relative;
+        color: #fff;
+        transform-style: preserve-3d;
+
+        &:before {
+          content: '';
+          background: #49c;
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          transform: translateZ(-1px);
+        }
+      }
+      &.weekend {
+        color: #d22;
+      }
+      &.other-month {
+        color: #ccc;
+      }
     }
   }
 }
