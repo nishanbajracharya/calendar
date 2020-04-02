@@ -39,5 +39,6 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
-  }
+  },
+  "homepage": "https://nishanbajracharya.github.io/calendar"
 }
