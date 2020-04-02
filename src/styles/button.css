@@ -3,10 +3,13 @@
   width: 48px;
   border: none;
   height: 48px;
+  display: flex;
   outline: none;
   cursor: pointer;
   font-size: 24px;
   background: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-icon:hover {
