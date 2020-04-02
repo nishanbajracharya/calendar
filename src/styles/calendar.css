@@ -21,7 +21,7 @@
 }
 
 .calendar .calendar-header-cell {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .calendar .cell-content {
@@ -29,4 +29,27 @@
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+}
+
+.calendar-cell.weekend {
+  color: #c44;
+}
+
+.calendar-cell.other-month {
+  color: #bbb;
+}
+
+.calendar-cell.today {
+  color: #fff;
+  font-weight: 700;
+}
+
+.calendar-cell.today .cell-content {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  background: #49c;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }

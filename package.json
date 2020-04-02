@@ -9,6 +9,7 @@
     "calendar-cli": "^1.0.0",
     "classnames": "^2.2.6",
     "lodash.get": "^4.4.2",
+    "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
